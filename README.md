@@ -1,2 +1,21 @@
 # mission-control
-A easy-to-use Admin Template(based on Vue) you need to create amazing user interfaces.
+
+## Project setup
+```
+yarn install
+```
+
+### Compiles and hot-reloads for development
+```
+yarn run serve
+```
+
+### Compiles and minifies for production
+```
+yarn run build
+```
+
+### Lints and fixes files
+```
+yarn run lint
+```
