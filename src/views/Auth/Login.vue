@@ -1,10 +1,10 @@
 <template>
-  <div class="auth-layout"></div>
+  <div class="login-page"></div>
 </template>
 
 <script>
 export default {
-  name: 'AuthLayout',
+  name: 'Login',
 }
 </script>
 

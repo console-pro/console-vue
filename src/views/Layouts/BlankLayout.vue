@@ -1,4 +1,6 @@
-<template></template>
+<template>
+  <div class="blank-layout"></div>
+</template>
 
 <script>
 export default {

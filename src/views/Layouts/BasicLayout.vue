@@ -1,4 +1,6 @@
-<template></template>
+<template>
+  <div class="basic-layout"></div>
+</template>
 
 <script>
 export default {
@@ -6,4 +8,12 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+@import '~@/styles/app';
+
+.basic-layout {
+  height: 100vh;
+
+  @include theme();
+}
+</style>

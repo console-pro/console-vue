@@ -1,0 +1,27 @@
+@mixin theme() {
+  .app--light &,
+  &--light {
+    color: $black;
+    background-color: $light;
+  }
+
+  .app--dark &,
+  &--dark {
+    color: $white;
+    background-color: $dark;
+  }
+}
+
+@mixin theme-light {
+  .app--light &,
+  &--light {
+    @content;
+  }
+}
+
+@mixin theme-dark {
+  .app--dark &,
+  &--dark {
+    @content;
+  }
+}
