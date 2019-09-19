@@ -1,7 +1,37 @@
+$primary: #409eff !default;
+
+// Colors
+$white: #fff !default;
+$gray-100: #f8f9fa !default;
+$gray-200: #e9ecef !default;
+$gray-300: #dee2e6 !default;
+$gray-400: #ced4da !default;
+$gray-500: #adb5bd !default;
+$gray-600: #6c757d !default;
+$gray-700: #495057 !default;
+$gray-800: #343a40 !default;
+$gray-900: #212529 !default;
+$black: #000 !default;
+
+// Themes
 $light: #fff !default;
 $dark: #171d28 !default;
 
-$primary: #409eff !default;
+$theme-light: (
+  'main-bg': $light,
+  'text-color': $black,
+  'secondary-text-color': $gray-900,
+  'tips-text-color': $gray-500,
+  'side-info-text-color': $gray-300,
+);
 
-$white: #fff !default;
-$black: #000 !default;
+$theme-dark: (
+  'main-bg': $dark,
+  'text-color': $white,
+  'secondary-text-color': $gray-100,
+  'tips-text-color': $gray-500,
+  'side-info-text-color': $gray-700,
+  'label-color': $gray-600,
+  'input-bg': #1c212e,
+  'input-placeholder-color': $gray-700,
+);

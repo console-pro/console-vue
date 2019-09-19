@@ -1,0 +1,38 @@
+@import './app';
+
+// Btn
+.el-button {
+  &--blocked {
+    display: block;
+    width: 100%;
+  }
+}
+
+// Form
+.el-form-item {
+  &__label {
+    @include theme-dark {
+      color: map-get($theme-dark, 'label-color');
+    }
+  }
+}
+.el-input {
+  &__inner {
+    @include theme-dark {
+      border-color: transparent;
+      background-color: map-get($theme-dark, 'input-bg');
+    }
+
+    &::-moz-input-placeholder {
+      color: map-get($theme-dark, 'input-placeholder-color');
+    }
+
+    &::-webkit-input-placeholder {
+      color: map-get($theme-dark, 'input-placeholder-color');
+    }
+
+    &:focus {
+      border-color: $primary;
+    }
+  }
+}

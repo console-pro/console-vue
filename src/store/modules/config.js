@@ -1,6 +1,9 @@
 import _ from 'lodash'
 
+const debugFlag = _.includes(window.location.search.substring(1), 'debug=')
+
 const state = {
+  debug: debugFlag,
   theme: 'dark',
 }
 

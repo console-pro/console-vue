@@ -1,0 +1,7 @@
+@function theme-light($attr) {
+  @return map-get($theme-light, $attr);
+}
+
+@function theme-dark($attr) {
+  @return map-get($theme-dark, $attr);
+}

@@ -1,14 +1,14 @@
 @mixin theme() {
   .app--light &,
   &--light {
-    color: $black;
-    background-color: $light;
+    color: map-get($theme-light, 'text-color');
+    background-color: map-get($theme-light, 'main-bg');
   }
 
   .app--dark &,
   &--dark {
-    color: $white;
-    background-color: $dark;
+    color: map-get($theme-dark, 'text-color');
+    background-color: map-get($theme-dark, 'main-bg');
   }
 }
 
