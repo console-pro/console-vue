@@ -18,6 +18,37 @@
   @include theme-dark {
     background-color: map-get($theme-dark, 'menubar-bg');
   }
+
+  &--horizontal.el-menu {
+    border-bottom: none;
+
+    .el-menu-item {
+      @include theme-dark {
+        &:focus,
+        &:hover {
+          color: map-get($theme-dark, 'text-color');
+          background-color: transparentize($primary, 0.2);
+        }
+      }
+    }
+    .el-submenu__title {
+      @include theme-dark {
+        color: map-get($theme-dark, 'menubar-text-color');
+      }
+
+      @include theme-dark {
+        &:focus,
+        &:hover {
+          color: map-get($theme-dark, 'text-color');
+          background-color: map-get($theme-dark, 'menubar-bg');
+        }
+      }
+
+      & & .el-menu {
+        background-color: darken(map-get($theme-dark, 'menubar-bg'), 0.7);
+      }
+    }
+  }
 }
 .el-menu-item {
   @include theme-dark {
@@ -37,6 +68,10 @@
       color: map-get($theme-dark, 'text-color');
       background-color: $primary;
     }
+  }
+
+  i {
+    color: inherit;
   }
 }
 .el-submenu {
