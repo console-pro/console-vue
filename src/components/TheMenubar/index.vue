@@ -36,7 +36,6 @@ export default {
     min-height: 100vh;
 
     & > .el-menu {
-      min-height: 100vh;
       border-right: 0;
     }
 
