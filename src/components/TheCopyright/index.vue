@@ -35,11 +35,11 @@ export default {
   text-align: center;
 
   @include theme-light {
-    color: theme-light('side-info-text-color');
+    color: theme-light('dispensable-info-text-color');
   }
 
   @include theme-dark {
-    color: theme-dark('side-info-text-color');
+    color: theme-dark('dispensable-info-text-color');
   }
 }
 </style>

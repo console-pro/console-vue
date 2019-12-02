@@ -7,9 +7,7 @@
       <div class="content">
         <router-view />
       </div>
-      <footer class="footer">
-        <the-copyright />
-      </footer>
+      <the-footer />
     </div>
   </div>
 </template>

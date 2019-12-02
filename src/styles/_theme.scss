@@ -15,23 +15,38 @@ $black: #000 !default;
 
 // Themes
 $light: #fff !default;
+$lightness: #f1f1f1 !default;
 $dark: #171d28 !default;
+$darker: #111621 !default;
 
 $theme-light: (
-  'main-bg': $light,
-  'text-color': $black,
+  // bg
+    'main-bg': $light,
+  'menubar-bg': $light,
+  // Text
+    'text-color': $black,
+  'menubar-text-color': $black,
   'secondary-text-color': $gray-900,
   'tips-text-color': $gray-500,
-  'side-info-text-color': $gray-300,
+  'dispensable-info-text-color': $gray-300,
+  // Divider
+    'divider-color': $gray-300
 );
 
 $theme-dark: (
-  'main-bg': $dark,
-  'text-color': $white,
+  // bg
+    'main-bg': $dark,
+  'menubar-bg': $darker,
+  // Text
+    'text-color': #ffffffde,
+  'menubar-text-color': #fff9,
   'secondary-text-color': $gray-100,
   'tips-text-color': $gray-500,
-  'side-info-text-color': $gray-700,
+  'dispensable-info-text-color': $gray-700,
   'label-color': $gray-600,
-  'input-bg': #1c212e,
+  // Form
+    'input-bg': #1c212e,
   'input-placeholder-color': $gray-700,
+  // Divider
+    'divider-color': $gray-900
 );
