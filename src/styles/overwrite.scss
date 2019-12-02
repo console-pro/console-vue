@@ -50,9 +50,11 @@
     }
   }
 }
+.el-menu--horizontal .el-menu .el-menu-item,
 .el-menu-item {
   @include theme-dark {
     color: map-get($theme-dark, 'menubar-text-color');
+    background-color: inherit;
   }
 
   @include theme-dark {
