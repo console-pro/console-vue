@@ -1,5 +1,6 @@
 <template>
   <div class="menubar menubar__container">
+    <the-board />
     <el-menu default-active="1-1">
       <el-submenu index="1">
         <template slot="title">
