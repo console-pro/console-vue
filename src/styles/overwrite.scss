@@ -175,3 +175,15 @@
     }
   }
 }
+
+// Breadcrumb
+.el-breadcrumb {
+  &__inner {
+    a,
+    &.is-link {
+      @include theme-dark {
+        color: $gray-700;
+      }
+    }
+  }
+}

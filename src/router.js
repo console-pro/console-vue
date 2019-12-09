@@ -12,7 +12,11 @@ const router = new Router({
   routes: [
     {
       path: '/',
+      name: 'home',
       component: BasicLayout,
+      meta: {
+        breadcrumbName: '首页',
+      },
       children: [
         {
           path: '/admin/accounts',
@@ -21,6 +25,9 @@ const router = new Router({
             import(
               /* webpackChunkName: "admin-accounts" */ './views/Admin/AccountList'
             ),
+          meta: {
+            breadcrumbName: '账户管理',
+          },
         },
         {
           path: '/admin/roles',
@@ -29,12 +36,18 @@ const router = new Router({
             import(
               /* webpackChunkName: "admin-roles" */ './views/Admin/RoleList'
             ),
+          meta: {
+            breadcrumbName: '角色管理',
+          },
         },
         {
           path: '/settings/info',
           name: 'infoSetting',
           component: () =>
             import(/* webpackChunkName: "info" */ './views/Setting/Info'),
+          meta: {
+            breadcrumbName: '账号设置',
+          },
         },
         {
           path: '/settings/security',
@@ -43,6 +56,9 @@ const router = new Router({
             import(
               /* webpackChunkName: "security" */ './views/Setting/Security'
             ),
+          meta: {
+            breadcrumbName: '安全设置',
+          },
         },
       ],
     },

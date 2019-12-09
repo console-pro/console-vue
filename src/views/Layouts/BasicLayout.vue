@@ -9,6 +9,7 @@
           <the-header />
         </el-header>
         <el-main>
+          <Breadcrumb />
           <div class="main">
             <transition
               name="page-transition-animation"
