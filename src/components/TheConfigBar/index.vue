@@ -76,6 +76,7 @@ export default {
     top: 0;
     right: 0;
     display: flex;
+    z-index: 10;
     align-items: center;
     min-height: 100%;
     transition: transform 0.225s cubic-bezier(0, 0, 0.2, 1);
