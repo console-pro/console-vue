@@ -104,7 +104,8 @@
     }
   }
 }
-.el-input {
+.el-input,
+.el-textarea {
   &__inner {
     @include theme-dark {
       color: $lightness;
@@ -122,6 +123,55 @@
 
     &:focus {
       border-color: $primary;
+    }
+  }
+}
+
+// Table
+.el-table {
+  th,
+  tr {
+    @include theme-dark {
+      background-color: map-get($theme-dark, 'main-bg');
+    }
+  }
+
+  &--border {
+    @include theme-dark {
+      border-color: map-get($theme-dark, 'divider-color');
+    }
+
+    th,
+    td {
+      @include theme-dark {
+        border-color: map-get($theme-dark, 'divider-color');
+      }
+    }
+
+    @include theme-dark {
+      &:before,
+      &:after {
+        background-color: map-get($theme-dark, 'divider-color');
+      }
+    }
+  }
+
+  &--enable-row-hover .el-table__body tr:hover > td {
+    @include theme-dark {
+      background-color: map-get($theme-dark, 'table-row-hover-bg');
+    }
+  }
+}
+
+// Pagination
+.el-pagination {
+  &.is-background {
+    .btn-prev,
+    .btn-next,
+    .el-pager li {
+      @include theme-dark {
+        background-color: map-get($theme-dark, 'table-row-hover-bg');
+      }
     }
   }
 }

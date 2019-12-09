@@ -20,7 +20,8 @@
             ></el-avatar
             ><strong class="header__username">超级管理员</strong>
           </template>
-          <el-menu-item index="/settings/account">个人设置</el-menu-item>
+          <el-menu-item index="/settings/info">个人设置</el-menu-item>
+          <el-menu-item index="/settings/security">安全设置</el-menu-item>
           <el-menu-item index="/auth/logout">退出登录</el-menu-item>
         </el-submenu>
       </el-menu>

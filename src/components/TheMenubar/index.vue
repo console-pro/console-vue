@@ -1,7 +1,7 @@
 <template>
   <div class="menubar menubar__container">
     <the-board />
-    <el-menu default-active="1-1">
+    <el-menu default-active="/settings/account" router>
       <el-submenu index="1">
         <template slot="title">
           <i class="el-icon-location"></i>
@@ -10,10 +10,22 @@
         <el-menu-item index="1-1">选项1</el-menu-item>
         <el-menu-item index="1-2">选项2</el-menu-item>
       </el-submenu>
-      <el-menu-item index="2">
-        <i class="el-icon-menu"></i>
-        <span slot="title">导航二</span>
-      </el-menu-item>
+      <el-submenu index="admin">
+        <template slot="title">
+          <i class="el-icon-location"></i>
+          <span>管理员设置</span>
+        </template>
+        <el-menu-item index="/admin/accounts">账号管理</el-menu-item>
+        <el-menu-item index="/admin/roles">角色管理</el-menu-item>
+      </el-submenu>
+      <el-submenu index="settings">
+        <template slot="title">
+          <i class="el-icon-location"></i>
+          <span>高级设置</span>
+        </template>
+        <el-menu-item index="/settings/info">账号设置</el-menu-item>
+        <el-menu-item index="/settings/security">安全设置</el-menu-item>
+      </el-submenu>
     </el-menu>
     <div class="menubar__indicator">
       <div class="menubar__indicator-line"></div>
@@ -34,6 +46,7 @@ export default {
   &__container {
     position: relative;
     min-height: 100vh;
+    user-select: none;
 
     & > .el-menu {
       border-right: 0;

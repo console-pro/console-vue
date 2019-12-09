@@ -13,6 +13,38 @@ const router = new Router({
     {
       path: '/',
       component: BasicLayout,
+      children: [
+        {
+          path: '/admin/accounts',
+          name: 'adminAccountList',
+          component: () =>
+            import(
+              /* webpackChunkName: "admin-accounts" */ './views/Admin/AccountList'
+            ),
+        },
+        {
+          path: '/admin/roles',
+          name: 'adminRoleList',
+          component: () =>
+            import(
+              /* webpackChunkName: "admin-roles" */ './views/Admin/RoleList'
+            ),
+        },
+        {
+          path: '/settings/info',
+          name: 'infoSetting',
+          component: () =>
+            import(/* webpackChunkName: "info" */ './views/Setting/Info'),
+        },
+        {
+          path: '/settings/security',
+          name: 'securitySetting',
+          component: () =>
+            import(
+              /* webpackChunkName: "security" */ './views/Setting/Security'
+            ),
+        },
+      ],
     },
     {
       path: '/auth',

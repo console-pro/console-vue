@@ -8,7 +8,9 @@
         <el-header height="auto">
           <the-header />
         </el-header>
-        <el-main>Main</el-main>
+        <el-main>
+          <router-view />
+        </el-main>
         <el-footer>
           <the-footer />
         </el-footer>
