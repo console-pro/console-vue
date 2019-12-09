@@ -60,6 +60,15 @@ const router = new Router({
             breadcrumbName: '安全设置',
           },
         },
+        {
+          path: '/messages',
+          name: 'messageList',
+          component: () =>
+            import(/* webpackChunkName: "messages" */ './views/Message'),
+          meta: {
+            breadcrumbName: '我的消息',
+          },
+        },
       ],
     },
     {

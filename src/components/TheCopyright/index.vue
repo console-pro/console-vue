@@ -33,6 +33,7 @@ export default {
 .copyright {
   font-size: 12px;
   text-align: center;
+  user-select: none;
 
   @include theme-light {
     color: theme-light('dispensable-info-text-color');
