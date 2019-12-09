@@ -1,11 +1,15 @@
 <template>
   <div class="header header__container">
     <div class="header__nav">
-      <el-menu mode="horizontal">
+      <el-menu
+        mode="horizontal"
+        :default-active="activedItem"
+        @select="handleSelect"
+      >
         <el-menu-item index="question"
           ><i class="el-icon-question"></i
         ></el-menu-item>
-        <el-menu-item index="message">
+        <el-menu-item index="/messages">
           <span class="header__message-badge">
             <el-badge :value="2">
               <i class="el-icon-message-solid"></i>
@@ -30,8 +34,28 @@
 </template>
 
 <script>
+import _ from 'lodash'
+
 export default {
   name: 'TheHeader',
+  data() {
+    return {
+      activedItem: '',
+    }
+  },
+  methods: {
+    handleSelect(index) {
+      if (_.startsWith(index, '/')) {
+        if (this.$route.path === index) {
+          return
+        }
+
+        this.$router.push(index)
+
+        this.activedItem = `${Date.now()}`
+      }
+    },
+  },
 }
 </script>
 
@@ -43,6 +67,7 @@ export default {
   flex-direction: row-reverse;
   height: 8 * $spacing;
   text-align: center;
+  user-select: none;
 
   @include theme-dark {
     .el-menu {
