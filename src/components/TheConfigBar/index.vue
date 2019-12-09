@@ -83,11 +83,16 @@ export default {
   }
 
   &__trigger {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
     display: flex;
     align-items: center;
     justify-content: center;
     width: 48px;
     height: 48px;
+    margin: auto;
     font-size: 20px;
     color: $white;
     border-top-left-radius: $border-radius;
