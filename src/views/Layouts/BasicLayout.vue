@@ -76,10 +76,11 @@ export default {
 }
 
 .animated {
-  -webkit-animation-duration: 1s;
-  animation-duration: 1s;
+  -webkit-animation-duration: 0.6s;
+  animation-duration: 0.5s;
   -webkit-animation-fill-mode: both;
   animation-fill-mode: both;
+  animation-timing-function: ease-in-out;
 }
 
 @-webkit-keyframes zoomIn {
