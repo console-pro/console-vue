@@ -4,4 +4,8 @@ body {
     'Hiragino Sans GB', 'Microsoft YaHei', 'Helvetica Neue', Helvetica, Arial,
     sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
   font-variant: tabular-nums;
+
+  &.app--dark {
+    background-color: map-get($theme-dark, 'main-bg');
+  }
 }

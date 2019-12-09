@@ -1,14 +1,36 @@
 <template>
   <div class="menubar menubar__container">
-    <the-board />
-    <el-menu :default-active="activedMenuItem" router>
-      <el-submenu index="1">
+    <the-board :collapse="isCollapse" />
+    <el-menu :default-active="activedMenuItem" :collapse="isCollapse" router>
+      <el-menu-item index="/dashborad">
+        <i class="el-icon-location"></i>
+        <span>仪表盘</span>
+      </el-menu-item>
+      <el-submenu index="detail-pages">
         <template slot="title">
           <i class="el-icon-location"></i>
-          <span>导航一</span>
+          <span>详情页</span>
         </template>
-        <el-menu-item index="1-1">选项1</el-menu-item>
-        <el-menu-item index="1-2">选项2</el-menu-item>
+        <el-menu-item index="/detail-pages/basic">基础详情页</el-menu-item>
+        <el-menu-item index="/detail-pages/advanced">高级详情页</el-menu-item>
+      </el-submenu>
+      <el-submenu index="error-pages">
+        <template slot="title">
+          <i class="el-icon-location"></i>
+          <span>异常页</span>
+        </template>
+        <el-menu-item index="/error-pages/403">403</el-menu-item>
+        <el-menu-item index="/error-pages/404">404</el-menu-item>
+        <el-menu-item index="/error-pages/500">500</el-menu-item>
+      </el-submenu>
+      <el-submenu index="app">
+        <template slot="title">
+          <i class="el-icon-location"></i>
+          <span>应用信息</span>
+        </template>
+        <el-menu-item index="/app/carousels">轮播图</el-menu-item>
+        <el-menu-item index="/app/news">新闻信息</el-menu-item>
+        <el-menu-item index="/app/system-config">系统配置</el-menu-item>
       </el-submenu>
       <el-submenu index="admin">
         <template slot="title">
@@ -27,7 +49,7 @@
         <el-menu-item index="/settings/security">安全设置</el-menu-item>
       </el-submenu>
     </el-menu>
-    <div class="menubar__indicator">
+    <div class="menubar__indicator" @click="toggleCollapse">
       <div class="menubar__indicator-line"></div>
     </div>
   </div>
@@ -39,6 +61,7 @@ export default {
   data() {
     return {
       activedMenuItem: '',
+      isCollapse: false,
     }
   },
   mounted() {
@@ -47,6 +70,11 @@ export default {
     }
 
     this.activedMenuItem = this.$route.path
+  },
+  methods: {
+    toggleCollapse() {
+      this.isCollapse = !this.isCollapse
+    },
   },
 }
 </script>
@@ -62,6 +90,11 @@ export default {
 
     & > .el-menu {
       border-right: 0;
+      width: 280px;
+
+      &.el-menu--collapse {
+        width: auto;
+      }
     }
 
     @include theme-dark {
