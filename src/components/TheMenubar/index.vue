@@ -1,7 +1,7 @@
 <template>
   <div class="menubar menubar__container">
     <the-board />
-    <el-menu default-active="/settings/account" router>
+    <el-menu :default-active="activedMenuItem" router>
       <el-submenu index="1">
         <template slot="title">
           <i class="el-icon-location"></i>
@@ -36,6 +36,18 @@
 <script>
 export default {
   name: 'TheMenubar',
+  data() {
+    return {
+      activedMenuItem: '',
+    }
+  },
+  mounted() {
+    if (this.activedMenuItem) {
+      return
+    }
+
+    this.activedMenuItem = this.$route.path
+  },
 }
 </script>
 
