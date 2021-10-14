@@ -15,11 +15,13 @@
   "homepage": "https://github.com/sqrthree/dashboard-vue#readme",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "build",
     "serve": "vite preview",
-    "lint": "eslint ./src"
+    "lint": "vue-tsc --noEmit && eslint --ext .js,.ts,.vue src"
   },
   "dependencies": {
+    "@typescript-eslint/eslint-plugin": "~5.0.0",
+    "@typescript-eslint/parser": "~5.0.0",
     "ant-design-vue": "~2.2.8",
     "vue": "~3.2.20"
   },
@@ -32,6 +34,8 @@
     "eslint-plugin-prettier": "~4.0.0",
     "eslint-plugin-vue": "~7.19.1",
     "prettier": "~2.4.1",
-    "vite": "~2.6.7"
+    "typescript": "~4.4.4",
+    "vite": "~2.6.7",
+    "vue-tsc": "~0.28.3"
   }
 }
