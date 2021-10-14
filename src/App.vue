@@ -1,35 +1,16 @@
+<script setup></script>
+
 <template>
-  <div id="app" :class="`app app--${theme}`">
-    <router-view />
-    <the-config-bar />
-  </div>
+  <img alt="Vue logo" src="./assets/logo.png" />
 </template>
 
-<script>
-export default {
-  name: 'APP',
-  computed: {
-    theme() {
-      return this.$store.state.config.theme
-    },
-  },
-  watch: {
-    '$store.state.config.theme'(value) {
-      this.setThemeToBody(value)
-    },
-  },
-  mounted() {
-    this.setThemeToBody(this.theme)
-  },
-  methods: {
-    setThemeToBody(theme) {
-      document.body.className = `app--${theme}`
-    },
-  },
+<style>
+#app {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+  margin-top: 60px;
 }
-</script>
-
-<style lang="scss">
-@import '~@/styles/overwrite';
-@import '~@/styles/global';
 </style>
